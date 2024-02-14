@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  frontend_game_service:
+    build: .
+    volumes:
+      - ./app:/app # Maps your local 'app' directory to the '/app' directory in the container
+    ports:
+      - "5173:5173" # Exposes Vite's default port to the host
+    # command: yarn dev --host 0.0.0.0
+    command: yarn dev --host 0.0.0.0
